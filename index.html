@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack Puzzle Game</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+    <!-- Story Page -->
+    <div id="story-page" class="outerDiv">
+        <!-- Exit Button -->
+        <button class="exitButton" onclick="exitGame()">Exit</button>
+
+        <h1>Knapsack Puzzle</h1>
+        <h3>Maximize the value of Gems you want to carry within your bag weight limit</h3>
+
+        <div class="rulesSection">
+            <span class="rulesTitle">Rules:</span> Objective
+        </div>
+
+        <!-- Main Content -->
+        <div class="innerDiv">
+            <h3 id="text">
+                While on a trek of the sahyadri range,<br>
+                you enter a mysterious cave and find...
+            </h3>
+            <div class="innerDivImages">
+                <img id="image" src="images/storyImg1.png">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="navArrow leftArrow" onclick="previous()"> &#9664; </button>
+            <div class="navDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="navArrow rightArrow" onclick="next()"> &#9654; </button>
+        </div>
+
+        <button id="start-game-btn" style="color:maroon;" onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Page -->
+    <div id="game-page" class="outerDiv" style="display:none;">
+        
+        <button class="exitButton" onclick="exitGame()">Exit</button>
+
+        <h2>Knapsack Puzzle</h2>
+        <h3>Drop Gems into the Knapsack (Max Weight: 30)</h3>
+
+        <!-- Draggable Items (Gems) -->
+        <div class="gems-container">
+            <div id="gem1" class="gem" data-weight="10" data-value="100" draggable="true" ondragstart="drag(event)">
+                Gem 1 (Weight: 10, Value: 100)
+            </div>
+            <div id="gem2" class="gem" data-weight="20" data-value="200" draggable="true" ondragstart="drag(event)">
+                Gem 2 (Weight: 20, Value: 200)
+            </div>
+            <div id="gem3" class="gem" data-weight="5" data-value="50" draggable="true" ondragstart="drag(event)">
+                Gem 3 (Weight: 5, Value: 50)
+            </div>
+        </div>
+
+        <!-- Knapsack (Drop Area) -->
+        <div class="knapsack-container">
+            <div id="knapsack" class="knapsack" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <!-- Dropped gems will appear here -->
+            </div>
+        </div>
+
+        <!-- Hint and Feedback Sections -->
+        <div id="weight-feedback"></div>
+        <div id="game-feedback"></div> <!-- Feedback after submission -->
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button onclick="submitSelection()">Submit</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+
+    <!-- Exit Message Page -->
+    <div id="exit-page" class="outerDiv" style="display:none;">
+        <h1>Hurray, Have a good day!</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/bg.jpg");
+}
+
+.outerDiv {
+    position: relative;
+    margin: 2% auto;
+    width: 60%;
+    border: 5px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.exitButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.exitButton:hover {
+    background-color: #ff2e1c;
+}
+
+/* Inner Content Styling */
+.innerDivImages img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Navigation Arrows and Dots in Story Page */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navArrow {
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navArrow:hover {
+    background-color: #ff2e1c;
+}
+
+/* Dots */
+.navDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+/* Gems Styling */
+.gems-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.gem {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #f0e68c;
+    cursor: grab;
+}
+
+/* Knapsack and Feedback Styling */
+.knapsack-container {
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: #d3d3d3;
+    position: relative;
+    height: 250px;
+}
+
+.knapsack {
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+/* Feedback Styling */
+#weight-feedback {
+    margin-top: 20px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+#game-feedback {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Game Controls */
+.game-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+.game-controls button {
+    padding: 10px 20px;
+    margin: 0 10px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .outerDiv {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .exitButton {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .navArrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #weight-feedback {
+        font-size: 16px;
+    }
+}
