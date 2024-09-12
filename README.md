@@ -19,6 +19,10 @@ This is an interactive web-based Knapsack Puzzle Game where users must maximize 
 ## How to Run the Game
 Simply open `index.html` in your web browser.
 
+## Live Demo
+You can view the live version of the game here: https://karthikr-01.github.io/knapsack-puzzle-game/
+
+
 ## Technologies Used
 - HTML5
 - CSS3
